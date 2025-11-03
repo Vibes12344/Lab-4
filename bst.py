@@ -1,4 +1,3 @@
-bst.py
 import sys
 import unittest
 from typing import *
