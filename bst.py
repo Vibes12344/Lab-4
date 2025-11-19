@@ -37,6 +37,7 @@ def insert(bst: BinarySearchTree, x: Any) -> BinarySearchTree:
         function=bst.function,
         tree= insert_node(bst.tree, x, bst.function),
     )
+
 def eq(a: Any, b: Any, comes_before: ComesBefore) -> bool:
     return not comes_before(a, b) and not comes_before(b, a)
 
