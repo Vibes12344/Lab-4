@@ -23,6 +23,10 @@ class BinarySearchTree:
     function: ComesBefore
     tree: Bintree = None
 
+# Defines a comes_before function for ordering
+def comes_before(a: Any, b: Any) -> bool:
+  return a < b
+
 # Checks whether the BST is empty
 def is_empty(bst: BinarySearchTree) -> bool:
     return bst.tree is None
