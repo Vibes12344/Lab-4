@@ -6,7 +6,7 @@ from dataclasses import dataclass
 sys.setrecursionlimit(10**6)
 from bst import *
 
-
+# Defines a comes_before function for ordering
 def comes_before(a: Any, b: Any) -> bool:
   return a < b
 
@@ -16,6 +16,7 @@ class Point2:
      x : float
      y : float
 
+# Checks if the comes_before function's comparison point is accurate for Point2 objects
 def point_dist(pt1 : Point2, pt2 : Point2) -> bool:
   return comes_before(math.sqrt(math.pow(pt1.x, 2) + math.pow(pt1.y, 2)), math.sqrt(math.pow(pt2.x, 2) + math.pow(pt2.y, 2)))
 
@@ -48,7 +49,7 @@ dist_bst : BinarySearchTree = BinarySearchTree(point_dist, Node(Point2(3, 4),
                                                                        None, 
                                                                        None)))
 
-
+# Defines a test suite for the Binary Search Tree implementation
 class BSTTests(unittest.TestCase):
   def test_is_empty(self):
     self.assertEqual(False, is_empty(order_nums))
